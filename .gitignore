@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Environment Variables
+.env
+
+# Django
+db.sqlite3
+*.sqlite3
+
+# Django Static/Media
+staticfiles/
+media/
+
+# Migrations (optional)
+**/migrations/
+!**/migrations/__init__.py
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# FAISS Vector Store
+faiss_index/
+*.faiss
+*.pkl
+
+# HuggingFace Cache
+.cache/
+huggingface/
+hf_cache/
+
+# Model cache
+models/
+
+# Temporary files
+temp/
+tmp/
+
+# PDF extraction temp
+*.tmp
+
+# Secret keys
+secrets.json
+credentials.json

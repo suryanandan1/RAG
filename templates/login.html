@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login | Travel Policy Assistant</title>
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <h1>Welcome Back</h1>
+        <p class="subtitle">Login to Travel Policy Assistant</p>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p class="link-text">
+            Don't have an account?
+            <a href="/signup/">Create Account</a>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

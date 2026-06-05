@@ -1,0 +1,40 @@
+# django==5.2.1
+
+# langchain
+# langchain-community
+# langchain-huggingface
+
+# faiss-cpu
+
+# sentence-transformers
+# transformers
+# torch
+
+# pypdf
+
+# python-dotenv
+# markdown
+
+Django==5.2.1
+
+langchain==0.3.25
+langchain-community==0.3.24
+langchain-core==0.3.64
+langchain-text-splitters==0.3.8
+langchain-huggingface==0.2.0
+langchain-mistralai==0.2.10
+
+faiss-cpu==1.11.0
+
+sentence-transformers==4.1.0
+transformers==4.52.4
+huggingface-hub==0.33.0
+torch==2.7.1
+
+pypdf==5.6.0
+python-dotenv==1.1.0
+
+markdown==3.8
+
+numpy==2.2.6
+requests==2.32.3

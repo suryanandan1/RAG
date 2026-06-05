@@ -1,0 +1,125 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Policy Assistant</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+            <button class="toggle-btn" id="toggleSidebar">
+                ←
+            </button>
+
+            <h2 class="logo-text">
+                Travel Policy Assistant
+            </h2>
+        </div>
+
+        <div class="user-card">
+            <div class="user-name">
+                {{ request.user.first_name }}
+            </div>
+
+            <div class="user-band">
+                Band: {{ request.user.userprofile.band }}
+            </div>
+        </div>
+
+        <a href="{% url 'logout' %}" class="logout-btn">
+            Logout
+        </a>
+
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-container">
+
+        <div class="chat-header">
+            <h1>Travel Policy Assistant</h1>
+            <p>Ask domestic or foreign travel policy questions</p>
+        </div>
+
+        <div class="chat-history">
+
+            {% if chat_history %}
+
+                {% for item in chat_history %}
+
+                    <div class="question-card">
+                        <div class="question">
+                            {{ item.question }}
+                        </div>
+                    </div>
+
+                    <div class="answer-card">
+                        <div class="answer">
+                            {{ item.answer|safe }}
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <div class="welcome-box">
+                    <h2>Welcome 👋</h2>
+                    <p>Ask any travel policy question to get started.</p>
+                </div>
+
+            {% endif %}
+
+        </div>
+
+        <div class="chat-input-container">
+            <form method="POST" class="chat-form">
+                {% csrf_token %}
+
+                <input
+                    type="text"
+                    name="query"
+                    placeholder="Ask your travel policy question..."
+                    required
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    Ask
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    const toggleBtn = document.getElementById("toggleSidebar");
+    const sidebar = document.getElementById("sidebar");
+
+    toggleBtn.addEventListener("click", function () {
+        sidebar.classList.toggle("collapsed");
+
+        if (sidebar.classList.contains("collapsed")) {
+            toggleBtn.innerHTML = "→";
+        } else {
+            toggleBtn.innerHTML = "←";
+        }
+    });
+</script>
+
+</body>
+
+</html>
