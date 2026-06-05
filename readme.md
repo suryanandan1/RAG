@@ -287,15 +287,18 @@ This information is not present in the travel policy documents.
 
 ### Login Page
 
-(Add Screenshot)
+<img width="1331" height="630" alt="image" src="https://github.com/user-attachments/assets/aff3e60d-d292-4df2-bada-7af3752e8f53" />
+
 
 ### Signup Page
 
-(Add Screenshot)
+<img width="1344" height="628" alt="image" src="https://github.com/user-attachments/assets/a1231ad7-b4f3-469a-a9b7-6c1ab7400ee1" />
+
 
 ### Chat UI
 
-(Add Screenshot)
+<img width="1339" height="628" alt="image" src="https://github.com/user-attachments/assets/929a3f39-2493-4ff3-8766-af23fca31b4b" />
+
 
 ---
 
