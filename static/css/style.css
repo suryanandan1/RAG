@@ -17,7 +17,7 @@ body {
 
 .sidebar {
     width: 280px;
-    background: #ffffff;
+    background: #81aad8;
     border-right: 1px solid #e5e7eb;
     padding: 24px;
     display: flex;
@@ -37,8 +37,8 @@ body {
 /* User Card */
 
 .user-card {
-    background: #eff6ff;
-    border: 1px solid #dbeafe;
+    background: #2e4b72;
+    border: 1px solid #496994;
     padding: 18px;
     border-radius: 16px;
     margin-top: 20px;
@@ -64,16 +64,53 @@ body {
 
 /* Toggle button */
 
+/* Sidebar top */
+
+.sidebar-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+/* Toggle button */
+
 .toggle-btn {
-    background: #eff6ff;
+    min-width: 44px;
+    height: 44px;
     border: none;
-    color: #2563eb;
-    width: 42px;
-    height: 42px;
     border-radius: 12px;
-    font-size: 20px;
+    background: #2563eb;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-btn:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+}
+
+/* Sidebar collapsed */
+
+.sidebar.collapsed {
+    width: 80px;
+    padding: 20px 14px;
+}
+
+.sidebar.collapsed .logo-text,
+.sidebar.collapsed .user-card,
+.sidebar.collapsed .logout-btn {
+    display: none;
+}
+
+.sidebar.collapsed .sidebar-top {
+    justify-content: center;
 }
 
 .toggle-btn:hover {
