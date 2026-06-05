@@ -272,7 +272,6 @@ This information is not present in the travel policy documents.
 
 ## Future Improvements
 
-* Admin Dashboard
 * PDF Upload UI
 * Chat Export
 * Multiple Company Policies
